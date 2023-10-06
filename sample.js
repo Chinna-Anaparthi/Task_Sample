@@ -28,7 +28,15 @@ app.post('/UserPost',(req,res)=>{
     Server.DataPost(req,res,()=>
     {});
  })
- 
+
+ app.put("/UserUpdate/:id", (req, res, next) => {
+    Server.DataPut(req, res, () => {});
+  });
+
+  app.delete("/UserDelete/:id", (req, res, next) => {
+    Server.DataDelete(req, res, () => {});
+  });
+
 const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`server is running on ${port}`)

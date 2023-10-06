@@ -19,10 +19,16 @@ mongoose
     console.log(error);
   });
 
-app.get('/User',(req,res)=>{
+app.get('/UserGet',(req,res)=>{
    Server.DataGet(req,res,()=>
    {});
 })
+
+app.post('/UserPost',(req,res)=>{
+    Server.DataPost(req,res,()=>
+    {});
+ })
+ 
 const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`server is running on ${port}`)

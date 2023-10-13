@@ -1,5 +1,5 @@
-const Database = require("./Database")
-const Database1=require("./RelugarFieldWork")
+const Database = require("./DataBase/Database")
+const Database1=require("./DataBase/RelugarFieldWork")
 
 const DataPost = async (req, res) => {
     try {

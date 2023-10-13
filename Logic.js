@@ -1,4 +1,5 @@
 const Database = require("./Database")
+const Database1=require("./RelugarFieldWork")
 
 const DataPost = async (req, res) => {
     try {
@@ -61,7 +62,7 @@ const DataDelete = async (req, res) => {
 
 const FieldworkGet = async (req, res) => {
     try {
-        const results = await RegularFieldWork.find();
+        const results = await Database1.find();
         res.status(200).json(results);
     } catch (error) {
         console.error(error);

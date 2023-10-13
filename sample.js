@@ -37,7 +37,7 @@ app.post('/UserPost',(req,res)=>{
     Server.DataDelete(req, res, () => {});
   });
 
-  app.get('/RegularFieldWork', (req, res) => {
+  app.get('/RegularFieldWork-Get', (req, res) => {
     Server.FieldworkGet(req, res, () => { })
 })
 

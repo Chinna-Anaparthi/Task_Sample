@@ -37,6 +37,11 @@ app.post('/UserPost',(req,res)=>{
     Server.DataDelete(req, res, () => {});
   });
 
+  app.get('/api/RegularFieldWork-Get', (req, res) => {
+    Server.FieldworkGet(req, res, () => { })
+})
+
+
 const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`server is running on ${port}`)

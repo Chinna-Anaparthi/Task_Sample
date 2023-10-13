@@ -57,4 +57,18 @@ const DataDelete = async (req, res) => {
         res.status(500).json({ message: "Internal Server Error" });
     }
 };
-module.exports={DataGet,DataPost,DataPut,DataDelete}
+
+
+const FieldworkGet = async (req, res) => {
+    try {
+        const results = await RegularFieldWork.find();
+        res.status(200).json(results);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Error fetching data from MongoDB' });
+    }
+  }
+  
+    
+
+module.exports={DataGet,DataPost,DataPut,DataDelete,FieldworkGet}

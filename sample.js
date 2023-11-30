@@ -13,7 +13,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("hosting MongoDB Connected");
+    console.log("Account_Manager MongoDB Connected");
   })
   .catch((error) => {
     console.log(error);
@@ -37,9 +37,6 @@ app.post('/UserPost',(req,res)=>{
     Server.DataDelete(req, res, () => {});
   });
 
-  app.get('/RegularFieldWork', (req, res) => {
-    Server.FieldworkGet(req, res, () => { })
-})
 
 
 const port = process.env.PORT;
